@@ -1,66 +1,21 @@
 (function() {
   // Initialize Firebase
-   var config = {
-    apiKey: "AIzaSyDDN6a5aZivUXwK0hz0ot__0vuaEfSPzb8",
-    authDomain: "chatfirst-fcac9.firebaseapp.com",
-    databaseURL: "https://chatfirst-fcac9.firebaseio.com",
-    storageBucket: "chatfirst-fcac9.appspot.com",
-    messagingSenderId: "891940893513"
-  };
-  firebase.initializeApp(config);
+  //  var config = {
+  //   apiKey: "AIzaSyDDN6a5aZivUXwK0hz0ot__0vuaEfSPzb8",
+  //   authDomain: "chatfirst-fcac9.firebaseapp.com",
+  //   databaseURL: "https://chatfirst-fcac9.firebaseio.com",
+  //   storageBucket: "chatfirst-fcac9.appspot.com",
+  //   messagingSenderId: "891940893513"
+  // };
+  // firebase.initializeApp(config);
 
 
-    const txtEmail = document.getElementById('txtEmail');
-    const txtPassword = document.getElementById('txtPassword');
-    const btnLogin = document.getElementById('btnLogin');
-    const btnSignUp = document.getElementById('btnSignUp');
-    const btnLogout = document.getElementById('btnLogout');
+  //   const txtEmail = document.getElementById('txtEmail');
+  //   const txtPassword = document.getElementById('txtPassword');
+  //   const btnLogin = document.getElementById('btnLogin');
+  //   const btnSignUp = document.getElementById('btnSignUp');
+  //   const btnLogout = document.getElementById('btnLogout');
 
-    //LOGIN EVENT LISTENER
-    btnLogin.addEventListener('click', event => {
-      const email = txtEmail.value;
-      const pass = txtPassword.value;
-      const auth = firebase.auth();
-
-      const promise = auth.signInWithEmailAndPassword(email, pass);
-            promise.then(() => console.log('log in'))
-            promise.catch(error => {
-                const errorCode = error.code;
-                const errorMessage = error.message;
-                console.log(errorMessage)
-              });
-           });
-
-    //SIGN UP EVENT LISTENER
-     btnSignUp.addEventListener('click', event => {
-      const email = txtEmail.value;
-      const pass = txtPassword.value;
-      const auth = firebase.auth();
-
-      const promise = auth.createUserWithEmailAndPassword(email, pass);
-
-            promise.catch(error => {
-                const errorCode = error.code;
-                const errorMessage = error.message;
-                console.log(errorMessage)
-              });
-           });
-
-      //LOG OUT EVENT LISTENER
-      btnLogout.addEventListener('click', e => {
-        firebase.auth().signOut();
-      });
-
-     //ADD A REALTIME addEventListener
-    firebase.auth().onAuthStateChanged(user => {
-
-        if (user) {
-          btnLogout.classList.remove('hide');
-        } else {
-          btnLogout.classList.add('hide');
-          console.log('not logged in')
-        }
-     });
 
 
     //read messages from firebase

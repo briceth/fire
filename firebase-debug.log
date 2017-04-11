@@ -1,0 +1,14 @@
+[debug] ----------------------------------------------------------------------
+[debug] Command:      /usr/local/Cellar/node/7.5.0/bin/node /usr/local/bin/firebase serve
+[debug] CLI Version:  3.5.0
+[debug] Platform:     darwin
+[debug] Node Version: v7.5.0
+[debug] Time:         Tue Apr 11 2017 09:44:28 GMT+0200 (CEST)
+[debug] ----------------------------------------------------------------------
+[debug] 
+[info] Starting Firebase development server...
+[info] 
+[info] Project Directory: /Users/bricetessierhuort/code/briceth/fire
+[info] Public Directory: public
+[info] 
+[info] Server listening at: http://localhost:5000
