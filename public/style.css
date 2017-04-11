@@ -1,0 +1,32 @@
+html { font-family: GillSans, Calibri, Trebuchet, sans-serif; }
+
+#chatList li {
+  list-style-type: none;
+  padding-right: 20px;
+  font-size: 18px;
+}
+
+#uploader {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+#mediaCapture {
+  display: none;
+}
+
+#image-form {
+  display: flex;
+  flex-direction: row;
+  width: 48px;
+  float: right;
+}
+
+#image-form #submitImage {
+  width: auto;
+  padding: 0 6px 0 1px;
+  min-width: 0;
+}
+#image-form #submitImage .material-icons {
+  top: -1px;
+}
